@@ -1,0 +1,106 @@
+ const double pi = 31.4;
+    int i; // ok f(int i) is forward declared
+    // C obj; // error! C not yet declared.
+    /**
+     * To solve the above problems we have two ways:
+     * move the entire definition of c before main.
+     * or you must add a forward-declaration for it.
+     */
+    string str; // ok std::string is declared in <string>.
+    // j = 0; //incomplete specification.
+
+    auto k = 10; // ok, type int is inferred by the compiler.
+
+    // --------------------------------------- Storage class Specifier --------------------------
+
+    // cout << defineRegisterStorageClass(); // it throws an warning:ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+
+    // Example -------------------------------------------------------------------------------------
+
+    for (int i = 0; i < 5; i++)
+    {
+        showStat(i);
+    }
+
+    // cout << "Another Example" << endl;
+
+    // cout << myObj1.userName << endl;
+    // cout << myObj2.userName << endl;
+
+    // cout << "Example Showing point 4 of the situations" << endl;
+    // C c1;
+    // C c2;
+    // c1.Test(300);
+    // c2.Test(300);
+
+    // Example of automatic vs. static initialization
+
+    // InitDemo I1("Auto I1");{
+    //     cout << "In block. \n";
+    //     InitDemo I2("Auto I2");
+    //     static InitDemo I3("Static I3");
+    // }
+    // cout << "Exited block.\n";
+
+    // ------- auto, The-specifier -------------------------------------------------------------------------------------
+
+    int count = 10;
+    int &countRef = count;
+    auto myAuto = countRef; // this drops the reference qualifiers
+
+    countRef = 11;
+
+    cout << count << " ";
+    myAuto = 12;
+    cout << count << endl;
+
+    // type deduction with braced initializers (C++ 14)
+
+    auto A = {1, 2};    // std::initializer_list<int>
+    auto B = {3, 6, 9}; // std::initializer_list<int>
+    for (auto &i : A)
+    {
+        cout << i << endl;
+    };
+    for (auto i : B)
+    {
+        cout << i << endl;
+    }
+    decltype(auto) pp = 34.23;
+    cout << sizeof(pp) << endl;
+
+    // int
+
+    auto C{4};
+    cout << C << endl;
+
+    // auto D  = {5,6.7}; // unable to deduce 'std::initializer_list<auto>' from '{5, 6.7000000000000002e+0}'
+
+    int j = 0; // variable j is explicitly type int
+
+    auto d = 0; // Variable k is implicitly type int because 0 is an integer.
+
+    map<int, list<string>> m;
+    m[1] = {"pranjal", "charles", "chuck"};
+
+    map<int, list<string>>::iterator itr = m.begin();
+    auto ii = m.begin();
+
+    //  ============================== const ==========================================
+
+    char this_char{'a'}, that_char{'b'};
+    char *mybuf = &this_char, *yourbuf = &that_char;
+
+    char *const aptr = mybuf; // pointer is constant not the data that is stored on that address
+    *aptr = 'C';              // ok
+    cout << *aptr << endl;
+    // aptr = yourbuf // error:read-only variable C3892
+
+    const wchar_t *mybuffff = L"testww";
+    printf_s("%s\n", mybuffff);
+
+    const wchar_t *ptrToConstData = mybuffff;
+
+    printf_s("%s\n", ptrToConstData);
+
+    //*ptrToConstData = L"a"; // here data stored on memory location is constant.so it is read-only

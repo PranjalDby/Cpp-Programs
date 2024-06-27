@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/pranj/code/Cpp-programs-master/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++20 -o CMakeFiles\\basics.dir\\DeclarationsAndDefinitions\\main.cpp.obj -c C:\\Users\\pranj\\code\\Cpp-programs-master\\basics\\DeclarationsAndDefinitions\\main.cpp",
+  "file": "C:/Users/pranj/code/Cpp-programs-master/basics/DeclarationsAndDefinitions/main.cpp",
+  "output": "CMakeFiles/basics.dir/DeclarationsAndDefinitions/main.cpp.obj"
+}
+]

@@ -1,0 +1,94 @@
+ //!Before C++20
+
+    // const char* str1 = u8"hello world";
+
+    //!C++20 and later
+    // cout << "hello world pranjal" << endl;
+    //! utf8 encoded strings
+
+//     const char8_t* cc = u8"Hello world";
+	// const char8_t* cc1 = u8"\u0232";
+    // const char8_t* str1 = u8"\uF608 IS O:)";
+    // printf("Value = %s\n",cc1);
+    // printf("SMiley:%s\n",str1);
+
+    //! wide string literals
+
+    const wchar_t* wide = L"ZYQXXX";
+    const wchar_t* newline = L"hello\ngoodbye";
+    // cout << "........................ wide string literals ......................................." << endl;
+
+    // cout << &newline << endl;
+
+    //! -------------------- Raw String Literals cpp(11) -----------------------------------------------
+
+    // const char* raw_narrow =  R"(An unescaped \ character)";
+    // const wchar_t* wide_raw = LR"(An unescaped \ character)";
+    // const char8_t* raw_utf8a = u8R"(An unescaped \ character)"; //before c++20
+    // const char16_t* raw_utf16 = uR"(utf 16 char)";
+    // cout << &wide_raw <<endl;
+
+    // //!- a delimiter is user-defined sequence of upto-16 characters
+
+    //    const char* bad_parens = R"()")"; // errr
+    // //! delimiter resolves it
+    // const char* good_parens = R"...()")..."; // to denote )"
+    // cout << good_parens << endl;
+    //    more on delimiters or user defined sequence
+
+    // const char8_t* utfss = u8R"Hell(pranjal"Hello There)Hell";
+    // printf("string = %s",utfss);
+
+
+    // //! we can construct a raw string literal that contains a newline (not the escaped character)
+    // const wchar_t* newline2 = LR"(Hello
+    // ..... GOOd Bouyyy..💖💖💖💖💖
+    // )";
+
+    //std::string literals (c++ 14)
+
+    // string norm_str{"Pranjal"s};
+    // string norm_str2{u8"hello world"} //before CXX20
+    // u8string u8string = {u8"Hello UTF_8 str"}; // CXX20;
+    // cout << &u8string << endl;
+
+    // using 's' suffix on raw string also
+    // u32string raw_str_suffixed = UR"(She Said "hello".)";
+
+    //-------------------------------------------- Size of String Literals -----------------------------------------------------------
+    // const wchar_t* name =L"Hello ! Pranjal Dubey 📞⚠️";
+
+    // const size_t byteSize = (wcslen(name) + 1) * sizeof(wchar_t);
+    // cout << wcslen(name) << endl;
+    // cout <<"ByteSize" << byteSize << endl;
+
+
+    // ------------------------------------------ Concatenating string literals -------------------------------------------------------
+
+    // char str[] = "12" "34"; // is same as char str[] = "1234"
+    // cout << str <<endl;
+    // char atr[] = "12\
+    // 34";
+    // cout << atr << endl;
+
+    // ------------------------------------------ User-Defined-literal -----------------------------------------------------------------
+
+    // string newStr = "Hello"s + "World"s;
+    // complex<double> num = (2.0 + 3.01i) * (5.0 + 4.3i);
+    // cout << num << endl;
+    // long double precisePress = 33.2_b + 42.2_b;
+    // cout << precisePress;
+
+
+    // cout << "---------------------------------- Examples following from geeks-for-geeks -------------------------------------------------" << endl;
+
+    // long double weight = 95.2_kg;
+    // cout << weight << endl;
+    // cout << setprecision(8) << (weight + 2.3_g) << endl;
+
+    // cout << "-------------- UDL for handling imaginary value ------------------------------------------------------------" << endl;
+
+    // complex<double> z = 3.0 + 4.0_i;
+    // complex<double> y = 2.1 + 3.6_i;
+    // cout << FLAG << endl;
+    // cout << "z + y " << z + y << endl;

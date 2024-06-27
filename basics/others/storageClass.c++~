@@ -1,0 +1,11 @@
+// Storage Classes in Cpp:Cpp offers six types of storage classes
+// 1.auto
+// 2.register
+// 3.extern
+// 4.mutable
+// thread_local
+
+#include <iostream>
+int main(){
+	std::cout << "Storage Classes" << std::endl;
+}
