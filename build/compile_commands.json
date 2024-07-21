@@ -1,8 +1,8 @@
 [
 {
-  "directory": "C:/Users/pranj/code/Cpp-programs-master/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++20 -o CMakeFiles\\basics.dir\\DeclarationsAndDefinitions\\main.cpp.obj -c C:\\Users\\pranj\\code\\Cpp-programs-master\\basics\\DeclarationsAndDefinitions\\main.cpp",
-  "file": "C:/Users/pranj/code/Cpp-programs-master/basics/DeclarationsAndDefinitions/main.cpp",
-  "output": "CMakeFiles/basics.dir/DeclarationsAndDefinitions/main.cpp.obj"
+  "directory": "C:/Users/pranj/Codes/Cpp-Programs/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe   -g -o CMakeFiles\\basics.dir\\basics\\DeclarationsAndDefinitions\\main.cpp.obj -c C:\\Users\\pranj\\Codes\\Cpp-Programs\\basics\\DeclarationsAndDefinitions\\main.cpp",
+  "file": "C:/Users/pranj/Codes/Cpp-Programs/basics/DeclarationsAndDefinitions/main.cpp",
+  "output": "CMakeFiles/basics.dir/basics/DeclarationsAndDefinitions/main.cpp.obj"
 }
 ]

@@ -65,8 +65,8 @@ int main()
 
     // Using second approach or place-value approach
 
-    // int p = 0;
-    // long long int ans = 0;
+    int p = 0;
+    long long int ans = 0;
 
     // while(n!=0){
     //     long int bit = n & 1;
@@ -83,7 +83,7 @@ int main()
     p = 0;
     while(n!=0){
         int digit = n % 10;
-        ans = ans * 10 + digit
+        ans = ans * 10 + digit;
         n /= 10;
     }
     cout << (ans);
