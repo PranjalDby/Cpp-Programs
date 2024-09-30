@@ -1,3 +1,0 @@
-C:/Users/pranj/Codes/Cpp-Programs/build/CMakeFiles/basics.dir
-C:/Users/pranj/Codes/Cpp-Programs/build/CMakeFiles/edit_cache.dir
-C:/Users/pranj/Codes/Cpp-Programs/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,97 @@
+// #include<bits/stdc++.h> //it has all the standard libraries that we need
+#include <iostream>
+#include <sstream> // Include the <sstream> header file for istringstream
+#include <istream>
+#include <string>
+#include <iomanip>
+#include <bitset>
+
+using namespace std;
+
+int main()
+{
+    // //this is our output stream..
+    // char sample[] = "GeeksforGeeks";
+    // cout << "Printing it works." << sample << endl;
+
+    // //this is our input stream:this is the instance of istream class
+    // int age;
+    // cout << "Enter Your age: " << endl;
+    // cin >> age; // here what happend is cin is connected to input device. the age is extracted by using >> (extraction operator)
+    // cout << "Your Age is " << age << endl;
+
+    // // un-buffered error stream
+
+    // cerr << "Erororororroro 😊" << endl;
+
+    // // buffered error stream
+
+    // clog << "An Buffered stream " << endl;
+
+    // manipulators in streams ----------------------------------------------------------------------------------------------------------
+
+    istringstream str("1.233");
+    string line;
+    getline(str >> dec, line); // ignores the white spaces from string sequences:here str >> ws ,here value of str is extracted and manipulated
+    cout << line << endl;
+
+    cout << "I'm your Goblin 👺" << endl;
+    // using ends
+    cout << "\na";
+    cout << "b"; // null character will be added
+    cout << "c";
+
+    cout << "A parameterized Manipulators" << endl;
+    /*
+    Some important manipulators in <iomanip> are:
+    1.setw (val): It is used to set the field width in output operations.
+    2.setfill (c): It is used to fill the character ‘c’ on output stream.
+    3.setprecision (val): It sets val as the new value for the precision of floating-point values.
+    4.setbase(val): It is used to set the numeric base value for numeric values.
+    5.setiosflags(flag): It is used to set the format flags specified by parameter mask.
+    6.resetiosflags(m): It is used to reset the format flags specified by parameter mask.
+
+    Some important manipulators in <ios> are:
+    1.showpos: It forces to show a positive sign on positive numbers.
+    2.noshowpos: It forces not to write a positive sign on positive numbers.
+    3.showbase: It indicates the numeric base of numeric values.
+    4.uppercase: It forces uppercase letters for numeric values.
+    5.nouppercase: It forces lowercase letters for numeric values.
+    6.fixed: It uses decimal notation for floating-point values.
+    7.scientific: It uses scientific floating-point notation.
+    8.hex: Read and write hexadecimal values for integers and it works same as the setbase(16).
+    9.dec: Read and write decimal values for integers i.e. setbase(10).
+    10.oct: Read and write octal values for integers i.e. setbase(10).
+    11.left: It adjusts output to the left.
+    12.right: It adjusts output to the right.
+    */
+
+    // setw(int)
+    //  cout <<"Pranjal" <<setw(4) << "|" << setw(9) << "Dubey"<<endl;
+
+    // //setfill(char)
+    // cout << "Pranjal's" << setw(10) << setfill('*') << "Monarch"<< endl;
+
+    // //setprecsion(int)
+    // double kol = 2.38769;
+    // cout << "precisions of 2 = " << setprecision(3) << kol << endl;
+
+    // setbase(int):this doesn't work with binary
+    //  string bi = "101"s;
+    //  unsigned long long value = stoull(bi, nullptr, 2);
+    //  bitset<16> biz = value;
+    int biz = -77;
+    cout << "octal base = " << setbase(8) << biz << endl; // it updates the value stored at `biz` bcs of extraction operator
+    // setiosflag:taking cout << stream and format according to format mask
+    //  cout << biz;
+    //  cout << "\noutput with custom format = " << setiosflags(std::ios::uppercase);
+    //  cout << biz << endl;
+
+    // custom-width
+    // std::cout.width(6);
+    // std::cout << std::internal << biz << '\n';
+    // std::cout.width(6);
+    // std::cout << std::left << biz << '\n';
+    // std::cout.width(6);
+    // std::cout << std::right << biz << '\n';
+}

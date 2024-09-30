@@ -1,0 +1,96 @@
+employee emp;
+    cout << "Enter your Id: " << endl;
+    cin >> emp.id;
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // this is used to ignore the new line
+    cout
+        << "Enter your Name: " << endl;
+    cin.get(emp.name, 50);
+    cout << "Enter your Salary: " << endl;
+    cin >> emp.salary;
+    cout << "Id: " << emp.id << "\n"
+         << "Name: " << emp.name << "Salary: " << emp.salary << endl;
+
+    cin.clear();
+    // creating the structure array
+    employee empArr[5];
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     cout << "Enter your Id: " << endl;
+    //     cin >> empArr[i].id;
+    //     cin.clear();
+    //     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // this is used to ignore the new line
+    //     cout
+    //         << "Enter your Name: " << endl;
+    //     cin.get(empArr[i].name, 50);
+    //     cout << "Enter your Salary: " << endl;
+    //     cin >> empArr[i].salary;
+    //     cout << "Id: " << empArr[i].id << "\n"
+    //          << "Name: " << empArr[i].name << "\nSalary: " << empArr[i].salary << endl;
+    // }
+    // int arr2[3] = {1, 2, 3};
+    // int arr3[100];
+    // std::fill_n(arr3, 100, 1);
+    // int arr3[5] = {1, 1, 1, 1, 1};
+    // for (auto i : arr3)
+    // {
+    //     cout << i << " ";
+    // }
+
+    // creating a pointer to the structure:which points to the memory block where structure is stored.
+    // we have to use the -> operator to access the members with the help of pointers.
+    employee *empPointer = &emp;
+    cout << "Enter The Updated name: " << endl;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get(empPointer->name, 50);
+    cout << "Emp Id = " << empPointer->id << "\nUpdated Name: " << empPointer->name << endl;
+
+    square sqr1 = {{40, 20}, {20, 10}};
+    // cout << "Value of x = " << sqr1.left.x << "Value of y = " << sqr1.left.y << endl;
+    // int x, y;
+    // cin >> x >> y;
+    // cout << "GCD of " << x << " " << y << " " << gcd(x, y);
+    struct node n1;
+    // initialization
+
+    n1.data1 = 10;
+    n1.data1 = 30;
+
+    struct node ob2;
+    ob2.data1 = 50;
+    ob2.data2 = 100;
+    n1.link = &ob2; // pointer pointing to the struct variable ob2;
+    // printf("%d", n1.link->data1);
+    // printf("\n%d", n1.link->data2);
+
+    // self - referential structures with multiple links.
+    doublyLL *head = new doublyLL(40);
+    createLink(head, 100);
+    createLink(head, 45);
+    createLink(head, 90);
+
+    // print(head);
+    cout << sqaure(4 + 4) << endl;
+    int x = 786;
+    int base = 3;
+    int power = 4;
+    // cout << setfill('*') << setw(6) << calcPower(base, power);
+    int num;
+    cin >> num;
+    double res = 0.0;
+    for (double i = 1.0; i <= num; i++)
+    {
+        if (i < 10)
+        {
+            res = (i / 10);
+        }
+        else
+        {
+            res = (i / 100);
+        }
+        // cout << setprecision(3) << setw(4) << res;
+    }
+    for (double i = 1.0; i <= num; i += 1.0)
+    {
+        cout << setprecision(2) << i << " " << setw(3);
+    }
